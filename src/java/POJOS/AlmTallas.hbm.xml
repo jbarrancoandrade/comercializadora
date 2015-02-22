@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 5/12/2014 10:43:55 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOS.AlmTallas" table="Alm_Tallas" schema="dbo" catalog="BD_SEGURIDAD" optimistic-lock="version">
+        <composite-id name="id" class="POJOS.AlmTallasId">
+            <key-property name="codGruT" type="string">
+                <column name="CodGruT" length="3" />
+            </key-property>
+            <key-property name="codTalla" type="string">
+                <column name="CodTalla" length="5" />
+            </key-property>
+        </composite-id>
+        <property name="nomTalla" type="string">
+            <column name="NomTalla" length="100" not-null="true" />
+        </property>
+        <property name="ordenTalla" type="int">
+            <column name="OrdenTalla" not-null="true" />
+        </property>
+        <property name="modificado" type="boolean">
+            <column name="Modificado" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

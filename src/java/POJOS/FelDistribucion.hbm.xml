@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 5/12/2014 10:43:55 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJOS.FelDistribucion" table="Fel_Distribucion" schema="dbo" catalog="BD_SEGURIDAD" optimistic-lock="version">
+        <composite-id name="id" class="POJOS.FelDistribucionId">
+            <key-property name="codAlm" type="string">
+                <column name="CodAlm" length="3" />
+            </key-property>
+            <key-property name="numFac" type="string">
+                <column name="NumFac" length="8" />
+            </key-property>
+            <key-property name="tipFac" type="string">
+                <column name="TipFac" length="3" />
+            </key-property>
+            <key-property name="codRes" type="string">
+                <column name="CodRes" length="3" />
+            </key-property>
+        </composite-id>
+        <property name="distribuidorId" type="int">
+            <column name="Distribuidor_Id" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
